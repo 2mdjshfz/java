@@ -11,6 +11,7 @@ public class Zegar {
 		for(int i = 0; i < tab.length; i++) {
 			if(tab[i] == 2) {
 				jeden = tab[i];
+				tab[i] = 99;
 			}
 			if(tab[i] == 1) {
 				
