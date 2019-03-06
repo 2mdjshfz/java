@@ -10,12 +10,12 @@ public class Zegar {
 		String c1 = "none", c2 = "none", c3 = "none", c4 = "none";
 		
 		for(i = 2, end = true; (i >= 0) && (end); i--) {
-			for(j = 0; j<tab.length;j++) {
-				if(tab[j]==i) {
-					c1=tab[j]+"";
+			for(j = 0; (j < tab.length) && (end);j++) {
+				if(tab[j] == i) {
+					c1 = tab[j]+"";
 					end = false;
-					pom1=tab[j];
-					tab[j]=-1;
+					pom1 = tab[j];
+					tab[j] = -1;
 				}
 			}
 		}
@@ -26,8 +26,8 @@ public class Zegar {
 			pom2 = 9;
 		}
 		
-		for(i = pom2, end = true; (i >=0) && (end); i--) {
-			for(j = 0; j < tab.length; j++) {
+		for(i = pom2, end = true; (i >= 0) && (end); i--) {
+			for(j = 0; (j < tab.length) && (end); j++) {
 				if(tab[j] == i) {
 					c2 = tab[j] + "";
 					end= false;
@@ -37,7 +37,7 @@ public class Zegar {
 		}
 		
 		for(i = 5, end = true; (i >=0) && (end); i--) {
-			for(j = 0; j < tab.length; j++) {
+			for(j = 0; (j < tab.length) && (end); j++) {
 				if(tab[j] == i) {
 					c3 = tab[j]+"";
 					end = false;
@@ -47,7 +47,7 @@ public class Zegar {
 		}
 		
 		for(i = 9, end = true; (i >=0) && (end); i--) {
-			for(j = 0; j < tab.length; j++) {
+			for(j = 0; j < (tab.length) && (end); j++) {
 				if(tab[j] == i) {
 					c4= tab[j]+"";
 					end = false;
@@ -64,7 +64,10 @@ public class Zegar {
 	}
 	
 	public static void main(String[] args) {
-		Oblicz(7, 5, 1, 2);
+		Oblicz(7,5,1,2);
+		Oblicz(0,0,0,0);
+		Oblicz(9,9,9,9);
+		Oblicz(0,9,0,9);
 	}
 
 }
