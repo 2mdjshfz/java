@@ -1,4 +1,8 @@
 package zajecia3;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.util.*;
 
 public class Zamiana {
 	public static StringBuffer LetterReplace(StringBuffer a, String b, String c)
@@ -74,8 +78,12 @@ public class Zamiana {
 
 		System.out.println(text);
 }
-	public static void main(String[] args) {
-		Zmien("Kowalski");
-		Zmien("Sierputowski");
+	public static void main(String[] args) throws IOException {
+		File file = new File("C:\\memy\\zajecia3\\woah.txt");
+		List<String> a = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
+		for(String line : a)
+		{
+			Zmien(line);
+		}
 	}
 }
